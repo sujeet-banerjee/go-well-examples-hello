@@ -1,0 +1,103 @@
+#1
+provide the git cli to make the hello module as well into a git repo.
+
+Turning your local hello project into its own Git repository is the perfect final step. Since it currently depends on your remote coffee module, tracking it in Git will allow you to share your working example with others.
+
+Here is the step-by-step Git CLI workflow to version control your hello module and push it to GitHub.
+
+Step 1: Initialize Git in the Hello Folder
+Make sure you are in the root of your hello directory:
+
+PowerShell
+cd C:\Sujeet\GoWorkspace\hello
+Then, initialize an empty Git repository:
+
+PowerShell
+git init
+Step 2: Create a .gitignore File (Important for Go)
+When you ran go build earlier, Go might have created a compiled .exe file in your folder. You never want to commit compiled binaries to Git—only the source code.
+
+Create a file named .gitignore in that folder and add this single line to it:
+
+Plaintext
+*.exe
+Step 3: Add and Commit Your Code
+Now, stage your Go files, your go.mod, your go.sum (which tracks the exact version of the coffee library you downloaded), and the .gitignore file.
+
+PowerShell
+git add .
+git commit -m "Initial commit: Hello world with remote coffee dependency"
+Step 4: Push to GitHub
+To push this to GitHub, you first need to go to your GitHub account in your web browser and create a new, empty repository (e.g., named go-hello-world). Do not initialize it with a README, .gitignore, or license, as you already have your local files.
+
+Once created, GitHub will give you an SSH or HTTPS URL (e.g., git@github.com:sujeet-banerjee/go-hello-world.git).
+
+Run these three commands to link your local folder to GitHub and push your code:
+
+1. Rename your default branch to 'main' (if it isn't already):
+
+PowerShell
+git branch -M main
+2. Link your local repo to the remote GitHub repo:
+(Replace the URL below with your actual new GitHub repo URL)
+
+PowerShell
+git remote add origin git@github.com:sujeet-banerjee/go-hello-world.git
+3. Push your code to the internet:
+
+PowerShell
+git push -u origin main
+That's it! Your hello project is now a fully version-controlled Go module living on GitHub, successfully importing a separate custom module you also built. You have just completed the core lifecycle of Go dependency management!
+
+--------------------------------
+
+#2
+provide the git cli to make the hello module as well into a git repo.
+
+Turning your local hello project into its own Git repository is the perfect final step. Since it currently depends on your remote coffee module, tracking it in Git will allow you to share your working example with others.
+
+Here is the step-by-step Git CLI workflow to version control your hello module and push it to GitHub.
+
+Step 1: Initialize Git in the Hello Folder
+Make sure you are in the root of your hello directory:
+
+PowerShell
+cd C:\Sujeet\GoWorkspace\hello
+Then, initialize an empty Git repository:
+
+PowerShell
+git init
+Step 2: Create a .gitignore File (Important for Go)
+When you ran go build earlier, Go might have created a compiled .exe file in your folder. You never want to commit compiled binaries to Git—only the source code.
+
+Create a file named .gitignore in that folder and add this single line to it:
+
+Plaintext
+*.exe
+Step 3: Add and Commit Your Code
+Now, stage your Go files, your go.mod, your go.sum (which tracks the exact version of the coffee library you downloaded), and the .gitignore file.
+
+PowerShell
+git add .
+git commit -m "Initial commit: Hello world with remote coffee dependency"
+Step 4: Push to GitHub
+To push this to GitHub, you first need to go to your GitHub account in your web browser and create a new, empty repository (e.g., named go-hello-world). Do not initialize it with a README, .gitignore, or license, as you already have your local files.
+
+Once created, GitHub will give you an SSH or HTTPS URL (e.g., git@github.com:sujeet-banerjee/go-hello-world.git).
+
+Run these three commands to link your local folder to GitHub and push your code:
+
+1. Rename your default branch to 'main' (if it isn't already):
+
+PowerShell
+git branch -M main
+2. Link your local repo to the remote GitHub repo:
+(Replace the URL below with your actual new GitHub repo URL)
+
+PowerShell
+git remote add origin git@github.com:sujeet-banerjee/go-hello-world.git
+3. Push your code to the internet:
+
+PowerShell
+git push -u origin main
+That's it! Your hello project is now a fully version-controlled Go module living on GitHub, successfully importing a separate custom module you also built. You have just completed the core lifecycle of Go dependency management!
